@@ -34,6 +34,8 @@ func fullJustify(words []string, maxWidth int) []string {
 
 func justify(words []string, maxWidth int, numSpaces int, isLastLine bool) string {
 	s := ""
+	// one space between words on the last line
+	// long trailing space after last word
 	if isLastLine || len(words) == 1 {
 		for _, word := range words {
 			s += word
